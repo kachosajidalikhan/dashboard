@@ -12,7 +12,7 @@ const Footer = () => {
             rel="noreferrer"
             className="text-blue-400 hover:underline"
           >
-            OrientSoft Solution
+            InTouch Solution
           </a>{" "}
           2024
         </p>
