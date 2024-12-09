@@ -42,12 +42,12 @@ const AddRoom = () => {
     };
 
     return (
-        <div className="min-h-screen bg-gray-100 flex items-center justify-center py-10 px-4">
+        <div className="min-h-screen bg-[#c2c3c7] flex items-center justify-center py-10 px-4">
             <form 
                 onSubmit={handleSubmit(saveUser)} 
                 className="bg-white shadow-md rounded-lg p-8 max-w-3xl w-full"
             >
-                <h4 className="text-2xl font-semibold text-center text-yellow-700 mb-6">Add Room Details</h4>
+                <h4 className="text-2xl font-semibold text-center text-[#c59a63] mb-6">Add Room Details</h4>
 
                 {/* Room Name */}
                 <div className="mb-4">
@@ -55,7 +55,7 @@ const AddRoom = () => {
                         {...register('roomName', { required: true })}
                         placeholder="Room Name"
                         type="text"
-                        className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-500 focus:outline-none"
+                        className="w-full px-4 py-2 border border-[#c2c3c7] rounded-lg focus:outline-none"
                     />
                     {errors.roomName && <div className="text-red-500 text-sm mt-1">Please Enter Room Name!</div>}
                 </div>
@@ -176,7 +176,7 @@ const AddRoom = () => {
 
                 <button
                     type="submit"
-                    className="w-full bg-yellow-600 text-white py-2 px-4 rounded-lg hover:bg-yellow-700 transition-colors"
+                    className="w-full bg-[#c59a63] text-[#293941] py-2 px-4 rounded-lg hover:bg-[#293941] hover:text-[#c59a63] transition-colors"
                 >
                     Add Room
                 </button>

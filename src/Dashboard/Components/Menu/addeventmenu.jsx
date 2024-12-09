@@ -38,9 +38,9 @@ const AddEventMenu = ({ addNewEventMenu }) => {
   };
 
   return (
-    <div className="page-wrapper bg-gray-100 min-h-screen">
+    <div className="page-wrapper bg-[#c2c3c7] min-h-screen">
       <div className="content container mx-auto px-4 py-6">
-        <h4 className="text-lg font-semibold mb-6">Add Event Menu</h4>
+        <h4 className="text-lg text-[#293941] font-semibold mb-6">Add Event Menu</h4>
         <form onSubmit={handleSubmit} className="bg-white p-4 rounded shadow">
           <div className="mb-4">
             <label className="block text-sm font-medium mb-1">Menu Name</label>
@@ -95,7 +95,7 @@ const AddEventMenu = ({ addNewEventMenu }) => {
               <button
                 type="button"
                 onClick={() => handleAddItem(courseIndex)}
-                className="btn bg-blue-500 text-white py-1 px-3 rounded hover:bg-blue-600"
+                className="btn bg-[#c2c3c7] text-white py-1 px-3 rounded"
               >
                 Add Item
               </button>
@@ -106,13 +106,13 @@ const AddEventMenu = ({ addNewEventMenu }) => {
           <button
             type="button"
             onClick={handleAddCourse}
-            className="btn bg-gray-500 text-white py-2 px-4 rounded hover:bg-gray-600"
+            className="btn bg-[#293941] text-[#c59a63] py-2 px-4 rounded hover:bg-[#c59a63] hover:text-[#293941]"
             >
             Add Course
           </button>
           <button
             type="submit"
-            className="btn bg-green-500 text-white py-2 px-4 rounded hover:bg-green-600"
+            className="btn bg-[#c59a63] text-[#293941] py-2 px-4 rounded hover:bg-[#293941] hover:text-[#c59a63]"
             >
             Save Event Menu
           </button>

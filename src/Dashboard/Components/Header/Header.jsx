@@ -15,7 +15,7 @@ export default function Header({ isOpen, toggleSidebar }) {
   };
 
   return (
-    <div className="fixed w-full h-20 flex bg-gray-800 p-4 text-white">
+    <div className="fixed z-50 w-full h-20 flex bg-[#293941] p-4 text-white">
       <div className={`${isOpen ? 'w-60 flex items-center' : ''}`}>
         <a href="/" className="flex items-center">
           <img
@@ -29,7 +29,7 @@ export default function Header({ isOpen, toggleSidebar }) {
       {/* Sidebar Toggle Button */}
       <button
         onClick={toggleSidebar}
-        className="text-gray-300 ml-8 hover:text-white focus:outline-none lg:block"
+        className="text-[#c59a63] ml-8 hover:text-white focus:outline-none lg:block"
       >
         <i
           className={`${
@@ -44,11 +44,11 @@ export default function Header({ isOpen, toggleSidebar }) {
         <li className="relative">
           <button
             onClick={toggleNotificationDropdown}
-            className="focus:outline-none relative text-gray-300 hover:text-white"
+            className="focus:outline-none relative text-[#c59a63] hover:text-white"
             aria-label="Notifications"
           >
             <i className="text-2xl fa fa-bell"></i>
-            <span className="absolute top-0 right-0 bg-red-500 text-white text-xs rounded-full px-[4.1px] py-[0.6px]">
+            <span className="absolute top-0 right-0 bg-[#293941] text-[#c59a63] text-xs rounded-full px-[4.1px] py-[0.6px]">
               3
             </span>
           </button>

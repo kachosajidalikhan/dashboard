@@ -22,8 +22,8 @@ export function IncomeChart() {
   return (
     <div className=" rounded-lg p-4 bg-white">
       <div className="mb-4">
-        <h2 className="text-lg font-bold">Income Overview</h2>
-        <p className="text-sm text-gray-500">
+        <h2 className="text-lg text-[#293941] font-bold">Income Overview</h2>
+        <p className="text-sm text-[#293941]">
           Monthly breakdown of room and event income
         </p>
       </div>
@@ -35,8 +35,8 @@ export function IncomeChart() {
             <YAxis />
             <Tooltip />
             <Legend />
-            <Bar dataKey="roomIncome" fill="#8884d8" name="Room Income" />
-            <Bar dataKey="eventIncome" fill="#82ca9d" name="Event Income" />
+            <Bar dataKey="roomIncome" fill="#293941" name="Room Income" />
+            <Bar dataKey="eventIncome" fill="#c59a63" name="Event Income" />
           </BarChart>
         </ResponsiveContainer>
       </div>

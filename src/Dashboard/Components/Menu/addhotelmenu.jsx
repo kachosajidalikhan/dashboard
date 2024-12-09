@@ -23,12 +23,12 @@ const AddHotelMenu = ({ addNewMenu }) => {
   };
 
   return (
-    <div className="page-wrapper bg-gray-100 min-h-screen">
+    <div className="page-wrapper bg-[#c2c3c7] min-h-screen">
       <div className="content container mx-auto px-4 py-6">
-        <h2 className="text-lg font-semibold mb-4">Add Hotel Menu</h2>
+        <h2 className="text-lg text-[#293941] font-semibold mb-4">Add Hotel Menu</h2>
         <form onSubmit={handleSubmit} className="bg-white p-4 rounded shadow">
           <div className="mb-4">
-            <label className="block text-sm font-medium mb-1">Menu Name</label>
+            <label className="block text-[#293941] text-sm font-medium mb-1">Menu Name</label>
             <input
               type="text"
               placeholder="Menu Name"
@@ -39,7 +39,7 @@ const AddHotelMenu = ({ addNewMenu }) => {
             />
           </div>
           <div className="mb-4">
-            <h4 className="text-sm font-medium mb-2">Menu Items</h4>
+            <h4 className="text-sm text-[#293941] font-medium mb-2">Menu Items</h4>
             {menuItems.map((item, index) => (
               <div key={index} className="flex items-center gap-4 mb-2">
                 <input
@@ -67,14 +67,14 @@ const AddHotelMenu = ({ addNewMenu }) => {
             <button
               type="button"
               onClick={handleAddItem}
-              className="btn bg-blue-500 text-white py-1 px-3 rounded hover:bg-blue-600"
+              className="btn bg-[#293941] text-[#c59a63] py-1 px-3 rounded hover:bg-[#c59a63] hover:text-[#293941]"
             >
               Add Item
             </button>
           </div>
           <button
             type="submit"
-            className="btn bg-green-500 text-white py-2 px-4 rounded hover:bg-green-600"
+            className="btn bg-[#c59a63] text-[#293941] py-2 px-4 rounded hover:bg-[#293941] hover:text-[#c59a63]"
           >
             Save Menu
           </button>

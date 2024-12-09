@@ -1,6 +1,8 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router";
 
 const HotelMenu = () => {
+  const navigate = useNavigate()
   const [menus, setMenus] = useState([
     {
       id: 1,
@@ -33,6 +35,10 @@ const HotelMenu = () => {
     );
   };
 
+  const handleMenu =()=>{
+    navigate('/add-hotel-menu')
+  }
+
   const handleEditItem = (menuId, itemIndex) => {
     const updatedMenus = [...menus];
     const menu = updatedMenus.find((menu) => menu.id === menuId);
@@ -48,11 +54,11 @@ const HotelMenu = () => {
   };
 
   return (
-    <div className="page-wrapper bg-gray-100 min-h-screen">
+    <div className="page-wrapper bg-[#c2c3c7] min-h-screen">
       <div className="content container mx-auto px-4 py-6">
         <div className="page-header mb-6">
           <div className="flex justify-between items-center">
-            <h4 className="text-lg font-semibold">Hotel Menus</h4>
+            <h4 className="text-lg text-[#293941] font-semibold">Hotel Menus</h4>
 
             <div className="nav-item flex align-center">
               <div className="input-group search-area">
@@ -79,8 +85,8 @@ const HotelMenu = () => {
             </div>
 
             <a
-              // onClick={handleRoom}
-              className="btn bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600"
+              onClick={handleMenu}
+              className="btn bg-[#293941] text-[#c59a63] py-2 px-4 rounded hover:bg-[#c59a63] hover:text-[#293941]"
             >
               Add Menu
             </a>
@@ -90,7 +96,7 @@ const HotelMenu = () => {
           <ul className="flex flex-col gap-6">
             {menus.map((menu) => (
               <li key={menu.id} className="border p-4 rounded">
-                <h4 className="text-xl font-semibold mb-2">{menu.name}</h4>
+                <h4 className="text-xl text-[#293941] font-semibold mb-2">{menu.name}</h4>
                 <ul className="space-y-2">
                   {menu.items.map((item, index) => (
                     <li
@@ -102,13 +108,13 @@ const HotelMenu = () => {
                       </span>
                       <div className="space-x-2">
                         <button
-                          className="btn bg-yellow-400 text-white py-1 px-3 rounded hover:bg-yellow-500"
+                          className="btn bg-[#c59a63] text-[#293941] py-1 px-3 rounded hover:bg-[#293941] hover:text-[#c59a63]"
                           onClick={() => handleEditItem(menu.id, index)}
                         >
                           Edit
                         </button>
                         <button
-                          className="btn bg-red-500 text-white py-1 px-3 rounded hover:bg-red-600"
+                          className="btn bg-[#293941] text-[#c59a63] py-1 px-3 rounded hover:bg-[#c59a63] hover:text-[#293941]"
                           onClick={() => handleDeleteItem(menu.id, index)}
                         >
                           Delete

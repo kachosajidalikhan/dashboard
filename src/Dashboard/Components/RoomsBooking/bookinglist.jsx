@@ -218,12 +218,12 @@ const RoomBooking = () => {
   };
   
   return (
-    <div className="page-wrapper bg-gray-100 min-h-screen">
+    <div className="page-wrapper bg-[#c2c3c7] min-h-screen">
       <div className="content container mx-auto px-4 py-6">
         {/* Page Header */}
         <div className="page-header mb-6">
           <div className="flex justify-between items-center">
-            <h4 className="text-lg font-semibold">Room Booking List</h4>
+            <h4 className="text-lg text-[#293941] font-semibold">Room Booking List</h4>
 
             <div className="nav-item flex align-center">
               <div className=" input-group search-area">
@@ -245,7 +245,7 @@ const RoomBooking = () => {
 
             <a
               onClick={handleBooking}
-              className="btn bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600"
+              className="btn bg-[#c59a63] text-[#293941] py-2 px-4 rounded hover:bg-[#293941] hover:text-[#c59a63]"
             >
               Book Room
             </a>
@@ -259,7 +259,7 @@ const RoomBooking = () => {
           <div className="dataTables_wrapper no-footer">
             <table className="border-collapse table card-table display mb-4 shadow-hover default-table dataTablesCard dataTable no-footer">
               <thead>
-                <tr>
+                <tr className="text-[#293941]">
                   <th className="px-2">Booking ID</th>
                   <th className="px-2">User Name</th>
                   <th className="px-2">Email ID</th>
@@ -348,9 +348,9 @@ const RoomBooking = () => {
                     <td><span className="text-nowrap">{booking.payment}</span></td>
                     <td>
                       <span
-                        className={`px-2 py-1 rounded text-white ${booking.status === "Active"
-                          ? "bg-green-500"
-                          : "bg-gray-500"
+                        className={`px-2 py-1 rounded ${booking.status === "Active"
+                          ? "bg-[#c59a63] text-[#293941]"
+                          : "bg-[#293941] text-[#c59a63]"
                           }`}
                       >
                         {booking.status}
@@ -358,9 +358,9 @@ const RoomBooking = () => {
                     </td>
                     <td className="px-2 py-2 text-right">
                       {/* <div className="inline-block relative"> */}
-                      <div key={index} className=" bg-white border rounded shadow-md">
+                      <div key={index} className=" bg-[#293941] text-[#c59a63] border rounded shadow-md hover:bg-[#c59a63] hover:text-[#293941]">
                         <button
-                          className="block focus:outline-none w-full text-left px-2 py-1 hover:bg-gray-100"
+                          className="block focus:outline-none w-full text-left px-2 py-1 "
                           onClick={handleDelete}
                         >
                           Delete

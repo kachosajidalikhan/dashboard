@@ -218,12 +218,12 @@ const RoomsPaymentList = () => {
   };
   
   return (
-    <div className="page-wrapper bg-gray-100 min-h-screen">
+    <div className="page-wrapper bg-[#c2c3c7] min-h-screen">
       <div className="content container mx-auto px-4 py-6">
         {/* Page Header */}
         <div className="page-header mb-6">
           <div className="flex justify-between items-center">
-            <h4 className="text-lg font-semibold">Room Payment List</h4>
+            <h4 className="text-lg text-[#293941] font-semibold">Room Payment List</h4>
 
             <div className="nav-item flex align-center">
               <div className=" input-group search-area">
@@ -245,7 +245,7 @@ const RoomsPaymentList = () => {
 
             <a
               onClick={handleBooking}
-              className="btn bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600"
+              className="btn bg-[#c59a63] text-[#293941] py-2 px-4 rounded hover:bg-[#293941] hover:text-[#c59a63]"
             >
               Book Room
             </a>
@@ -259,7 +259,7 @@ const RoomsPaymentList = () => {
           <div className="dataTables_wrapper no-footer">
             <table className="border-collapse table card-table display mb-4 shadow-hover default-table dataTablesCard dataTable no-footer">
               <thead>
-                <tr>
+                <tr className="text-[#293941]">
                   <th className="px-2">Booking ID</th>
                   <th className="px-2">Room No</th>
                   <th className="px-2">Booked By</th>
@@ -344,9 +344,9 @@ const RoomsPaymentList = () => {
                     <td className="px-2 py-2 text-center">
                       {/* <div className="inline-block relative"> */}
                       
-                        {booking.payment === 'Half Pay' ? <div key={index} className=" bg-white border rounded shadow-md">
+                        {booking.payment === 'Half Pay' ? <div key={index} className=" bg-[#c59a63] border hover:bg-[#293941] rounded shadow-md">
                           <button
-                          className="text-red-500 block focus:outline-none w-full text-left px-2 py-1 hover:bg-gray-100"
+                          className="text-[#293941] block focus:outline-none w-full text-left px-2 py-1 hover:text-[#c59a63] "
                           onClick={handleDelete}
                         >
                           Recived
@@ -354,7 +354,7 @@ const RoomsPaymentList = () => {
                       </div>
                         : 
                         
-                        <span className="text-green-500 font-semibold text-nowrap">Paid</span>
+                        <span className="text-[#293941] font-semibold text-nowrap">Paid</span>
                         
                         }
                         

@@ -41,7 +41,7 @@ function ImageGrid() {
             </div>
             <a
                 onClick={()=>navigate('/add-image')}
-                className="btn bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600"
+                className="btn bg-[#c59a63] text-[#293941] py-2 px-4 rounded hover:bg-[#293941] hover:text-[#c59a63]"
             >
                 Add Images
             </a>

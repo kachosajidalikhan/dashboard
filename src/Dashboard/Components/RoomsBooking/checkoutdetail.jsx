@@ -100,7 +100,7 @@ const BookingDetail = () => {
 
     <div className="container mx-auto px-4">
     <div className="py-5 text-center">
-  <h2 className="text-2xl font-semibold">Terms & Conditions for Checkout</h2>
+  <h2 className="text-2xl text-[#293941] font-semibold">Terms & Conditions for Checkout</h2>
   <p className="text-lg text-gray-600">
     For bookings made by the admin, 100% payment is required at the time of booking.
   </p>
@@ -143,7 +143,7 @@ const BookingDetail = () => {
               <span className="text-gray-600">10/02/2024</span>
               {/* <span className="text-gray-600">{checkOut}</span> */}
             </li>
-            <li className="flex justify-between items-center bg-gray-200 p-1 rounded text-green-600">
+            <li className="flex justify-between items-center bg-[#c2c3c7] p-1 rounded text-[#293941]">
               <div>
                 <h6 className="font-medium">No Of Stay</h6>
               </div>
@@ -151,14 +151,14 @@ const BookingDetail = () => {
               {/* <span>{BookingDetail.numberOfDays}</span> */}
             </li>
             <hr className="my-6" />
-            <li className="flex justify-between items-center bg-gray-100 p-1 rounded">
+            <li className="flex justify-between items-center bg-[#c2c3c7] p-1 rounded text-[#293941]">
               <span>Total Amount (PKR)</span>
               <strong>10,000</strong>
               {/* <strong>{BookingDetail.totalPrice}</strong> */}
             </li>
 
             <hr className="my-6" />
-            <li className="flex justify-between items-center bg-gray-100 p-1 rounded">
+            <li className="flex justify-between items-center bg-[#c2c3c7] text-[#293941] p-1 rounded">
               <span>Payable Amount (PKR)</span>
               <strong>3000</strong>
               {/* <strong>{BookingDetail.totalPrice}</strong> */}
@@ -236,7 +236,7 @@ const BookingDetail = () => {
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               <div>
-                <label className="font-semibold">Account Holder Name</label>
+                <label className="text-[#293941] font-semibold">Account Holder Name</label>
                 <input
                   {...register("accountHolderName", { required: true })}
                   type="text"
@@ -247,7 +247,7 @@ const BookingDetail = () => {
                 {errors.accountHolderName && <div className="text-red-600 mt-1">Please Enter Account Holder Name!</div>}
               </div>
               <div>
-                <label className="font-semibold">Account Number</label>
+                <label className="text-[#293941] font-semibold">Account Number</label>
                 <input
                   {...register("accountNumber", { required: true })}
                   type="number"
@@ -271,7 +271,7 @@ const BookingDetail = () => {
             <button
               type="submit"
               onClick={()=>{nav('/bookingsuccess');}}
-              className="w-full bg-blue-600 text-white py-2 px-4 rounded hover:bg-blue-700 focus:ring focus:ring-blue-300"
+              className="w-full bg-[#c59a63] text-[#293941] py-2 px-4 rounded hover:bg-[#293941] hover:text-[#c59a63]"
             >
               
               Continue to Checkout

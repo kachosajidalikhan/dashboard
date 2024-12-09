@@ -9,14 +9,14 @@ const sampleEvents = [
     title: "Wedding",
     date: new Date(2024, 10, 1), // November 1, 2024
     time: "Evening",
-    color: "bg-blue-500 text-white"
+    // color: "bg-blue-500 text-white"
   },
   {
     id: "2",
     title: "Birthday",
     date: new Date(2024, 10, 30), // November 30, 2024
     time: "Morning",
-    color: "bg-indigo-500 text-white"
+    // color: "bg-indigo-500 text-white"
   }
 ]
 
@@ -90,8 +90,9 @@ export default function Calendar({ mode = "month", events = sampleEvents }) {
   return (
     <div className="w-full max-w-4xl mx-auto p-6">
       <div className="flex justify-between items-center mb-6">
-        <h1 className="text-2xl font-semibold">Events Calendar</h1>
-        <button onClick={()=>navigate('/event-booking')} className="bg-blue-600 rounded px-2 py-2 hover:bg-blue-600 text-white">
+        <h1 className="text-2xl text-[#293941] font-semibold">Events Calendar</h1>
+        <button onClick={()=>navigate('/event-booking')} 
+        className="bg-[#293941] rounded px-2 py-2 hover:bg-[#c59a63] text-[#c59a63] hover:text-[#293941]">
           Book Event
         </button>
       </div>
@@ -102,7 +103,7 @@ export default function Calendar({ mode = "month", events = sampleEvents }) {
             variant="outline" 
             size="icon"
             onClick={goToPreviousMonth}
-            className="btn border-lg border-blue-600 text-black hover:text-white rounded hover:bg-blue-600"
+            className="btn border-lg border-[#293941] text-[#293941] hover:text-[#c59a63] rounded hover:bg-[#293941]"
           >
             <ChevronLeft className="h-4 w-4" />
           </button>
@@ -110,21 +111,21 @@ export default function Calendar({ mode = "month", events = sampleEvents }) {
             variant="outline"
             size="icon"
             onClick={goToNextMonth}
-            className="btn border-lg border-blue-600 text-black hover:text-white rounded hover:bg-blue-600"
+            className="btn border-lg border-[#293941] text-[#293941] hover:text-[#c59a63] rounded hover:bg-[#293941]"
           >
             <ChevronRight className="h-4 w-4" />
           </button>
           <button 
             variant="secondary"
             onClick={goToToday}
-            className="btn bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600"
+            className="btn bg-[#c59a63] text-[#293941] py-2 px-4 rounded hover:bg-[#293941] hover:text-[#c59a63]"
           >
             Today
           </button>
         </div>
 
         <div className="flex items-center gap-1">
-          <h2 className="text-lg font-medium mr-4">
+          <h2 className="text-lg text-[#293941] font-medium mr-4">
             {currentDate.toLocaleString('default', { month: 'long', year: 'numeric' }).toUpperCase()}
           </h2>
         </div>
@@ -135,7 +136,7 @@ export default function Calendar({ mode = "month", events = sampleEvents }) {
           {daysOfWeek.map((day) => (
             <div
               key={day}
-              className="py-2 text-sm font-medium text-center border-r last:border-r-0"
+              className="py-2 text-sm bg-[#293941] text-[#c59a63] font-medium text-center border-r last:border-r-0"
             >
               {day}
             </div>
@@ -147,14 +148,14 @@ export default function Calendar({ mode = "month", events = sampleEvents }) {
             <div
               key={index}
               className={clsx(
-                "h-32 p-2 border-r border-b last:border-r-0 hover:bg-gray-50",
-                !day.isCurrentMonth && "text-gray-400 bg-gray-50"
+                "h-32 p-2 border-r border-b text-[#293941] last:border-r-0 hover:bg-[#293941] hover:text-[#c59a63]",
+                !day.isCurrentMonth && "text-[#293941] bg-[#c2c3c7]"
               )}
             >
               <span
                 className={clsx(
                   "inline-flex items-center justify-center w-6 h-6 rounded-full",
-                  day.isToday && "bg-blue-500 text-white"
+                  day.isToday && "bg-[#293941] text-[#c59a63]"
                 )}
               >
                 {day.date}
@@ -165,7 +166,7 @@ export default function Calendar({ mode = "month", events = sampleEvents }) {
                     key={event.id}
                     className={clsx(
                       "text-xs px-2 py-1 rounded",
-                      event.color || "bg-blue-500 text-white"
+                      event.color || "bg-[#c59a63] text-[#293941]"
                     )}
                   >
                     {event.time} {event.title}

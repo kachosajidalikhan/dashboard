@@ -48,7 +48,7 @@ function ImageUploadForm() {
   return (
     <div className="min-h-screen bg-gray-100 flex items-center justify-center py-10 px-4">
     <form onSubmit={handleSubmit} className="bg-white shadow-md rounded-lg p-8 max-w-3xl w-full">
-        <h4 className="text-2xl font-semibold text-center text-yellow-700 mb-6">Add Images In Gallery</h4>
+        <h4 className="text-2xl font-semibold text-center text-[#c59a63] mb-6">Add Images In Gallery</h4>
       <div>
         <label htmlFor="image" className="block text-sm font-medium text-gray-700">
           Image
@@ -59,7 +59,7 @@ function ImageUploadForm() {
           accept="image/*"
           onChange={(e) => setFile(e.target.files?.[0] || null)}
           required
-          className="mt-1 block w-full rounded-md border border-gray-300 bg-white py-2 px-3 text-sm text-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50"
+          className="mt-1 block w-full rounded-md border border-gray-300 bg-white py-2 px-3 text-sm text-gray-700 focus:outline-none "
         />
       </div>
       <div>
@@ -72,7 +72,7 @@ function ImageUploadForm() {
           onChange={(e) => setAltText(e.target.value)}
           placeholder="Describe the image"
           required
-          className="mt-1 block w-full rounded-md border border-gray-300 bg-white py-2 px-3 text-sm text-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50"
+          className="mt-1 block w-full rounded-md border border-gray-300 bg-white py-2 px-3 text-sm text-gray-700 focus:outline-none "
         />
       </div>
       <div>
@@ -85,13 +85,13 @@ function ImageUploadForm() {
           onChange={(e) => setTags(e.target.value)}
           placeholder="Enter tags separated by commas"
           required
-          className=" block w-full rounded-md border border-gray-300 bg-white py-2 px-3 text-sm text-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50"
+          className=" block w-full rounded-md border border-gray-300 bg-white py-2 px-3 text-sm text-gray-700 focus:outline-none"
           />
       </div>
       <button
         type="submit"
         disabled={isUploading}
-        className={`w-full mt-4 flex justify-center items-center rounded-md bg-blue-500 py-2 px-4 text-sm font-medium text-white hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50 ${
+        className={`w-full mt-4 flex justify-center items-center rounded-md bg-[#c59a63] py-2 px-4 text-sm font-medium text-[#293941] hover:bg-[#293941] hover:text-[#c59a63] focus:outline-none ${
             isUploading ? "opacity-50 cursor-not-allowed" : ""
         }`}
       >

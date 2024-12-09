@@ -83,13 +83,13 @@ const EventMenu = () => {
   };
 
   return (
-    <div className="page-wrapper bg-gray-100 min-h-screen">
+    <div className="page-wrapper bg-[#c2c3c7] min-h-screen">
       <div className="content container mx-auto px-4 py-6">
-        <h4 className="text-lg font-semibold mb-6">Event Menus</h4>
+        <h4 className="text-lg text-[#293941] font-semibold mb-6">Event Menus</h4>
         <div className="bg-white p-4 rounded shadow">
           {eventMenus.map((menu, menuIdx) => (
             <div key={menu.id} className="border-b mb-6 pb-4">
-              <h5 className="text-xl font-bold">{menu.name}</h5>
+              <h5 className="text-xl text-[#293941] font-bold">{menu.name}</h5>
               {menu.courses.map((course, courseIdx) => (
                 <div key={courseIdx} className="mt-4">
                   <div className="flex justify-between items-center">
@@ -106,13 +106,13 @@ const EventMenu = () => {
                   <div className="flex gap-2 mt-2">
                     <button
                       onClick={() => handleEditCourse(menuIdx, courseIdx)}
-                      className="btn bg-blue-500 text-white py-1 px-3 rounded"
+                      className="btn bg-[#c59a63] text-[#293941] py-1 px-3 rounded hover:bg-[#293941] hover:text-[#c59a63]"
                     >
                       Edit Course
                     </button>
                     <button
                       onClick={() => handleDeleteCourse(menu.id, courseIdx)}
-                      className="btn bg-red-500 text-white py-1 px-3 rounded"
+                      className="btn bg-[#293941] text-[#c59a63] py-1 px-3 rounded hover:bg-[#c59a63] hover:text-[#293941]"
                     >
                       Delete Course
                     </button>
@@ -126,7 +126,7 @@ const EventMenu = () => {
 
       {/* Edit Course Modal */}
       {isEditing && (
-        <div className="overflow-y-auto fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center">
+        <div className="overflow-y-auto z-50 fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center">
           <div className=" bg-white p-6 rounded shadow-md w-full max-w-md ">
             <br />
             <br />
@@ -137,7 +137,7 @@ const EventMenu = () => {
             <br />
             <br />
             <br />
-            <h4 className="text-lg font-bold mb-4">Edit Course</h4>
+            <h4 className="text-lg text-[#293941] font-bold mb-4">Edit Course</h4>
             <input
               type="text"
               className="w-full border px-3 py-2 mb-4 rounded"
@@ -181,7 +181,7 @@ const EventMenu = () => {
                     items: [...editingCourse.items, ""],
                   })
                 }
-                className="btn bg-gray-500 text-white py-1 px-3 rounded mt-2"
+                className="btn bg-[#c2c3c7] text-white py-1 px-3 rounded mt-2"
               >
                 Add Item
               </button>
@@ -189,13 +189,13 @@ const EventMenu = () => {
             <div className="flex gap-2">
               <button
                 onClick={handleSaveCourse}
-                className="btn bg-green-500 text-white py-1 px-3 rounded"
+                className="btn bg-[#c59a63] text-[#293941] py-1 px-3 rounded"
               >
                 Save
               </button>
               <button
                 onClick={() => setIsEditing(false)}
-                className="btn bg-red-500 text-white py-1 px-3 rounded"
+                className="btn bg-[#293941] text-[#c59a63] hover:text-[#c59a63] py-1 px-3 rounded"
               >
                 Cancel
               </button>

@@ -9,9 +9,9 @@ export default function IncomeReport() {
     const yearlyIncome = 624000;
 
     return (
-        <div className="page-wrapper bg-gray-100 min-h-screen">
+        <div className="page-wrapper bg-[#c2c3c7] min-h-screen">
             <div className="content container mx-auto px-4 py-6">
-                <h1 className="text-3xl font-bold mb-6">Income Report</h1>
+                <h1 className="text-3xl text-[#293941] font-bold mb-6">Income Report</h1>
 
                 {/* Income Cards */}
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-3">
@@ -25,7 +25,7 @@ export default function IncomeReport() {
                                 <h2 className="text-sm text-gray-600">{card.title}</h2>
                             </div>
                             <div>
-                                <div className="text-xl font-bold text-green-500">${card.amount.toLocaleString()}</div>
+                                <div className="text-xl font-bold text-[#c59a63]">${card.amount.toLocaleString()}</div>
                                 <p className="text-xs text-gray-500">{card.growth}</p>
                             </div>
                         </div>
@@ -37,14 +37,14 @@ export default function IncomeReport() {
                     <div className="flex space-x-4">
                         <button
                             onClick={() => setActiveTab("table")}
-                            className={`bg-green-500 text-white px-4 py-2 focus:outline-none rounded-lg shadow-md ${activeTab === "table" ? "border-b-2 border-green-500 bg-green-600" : "text-gray-500"
+                            className={`bg-[#293941] px-4 py-2 focus:outline-none rounded-lg shadow-md ${activeTab === "table" ? "bg-[#c2c3c7] text-[#293941]" : "text-[#c59a63]"
                                 }`}
                         >
                             Table View
                         </button>
                         <button
                             onClick={() => setActiveTab("chart")}
-                            className={`bg-green-500 text-white px-4 py-2 focus:outline-none rounded-lg shadow-md ${activeTab === "chart" ? "border-b-2 border-green-500 bg-green-600" : "text-gray-500"
+                            className={`bg-[#293941] px-4 py-2 focus:outline-none rounded-lg shadow-md ${activeTab === "chart" ? "bg-[#c2c3c7] text-[#293941]" : "text-[#c59a63]"
                                 }`}
                         >
                             Chart View

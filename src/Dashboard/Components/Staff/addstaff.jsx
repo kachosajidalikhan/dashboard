@@ -42,12 +42,12 @@ const AddStaff = () => {
     };
 
     return (
-        <div className="min-h-screen bg-gray-100 flex items-center justify-center py-10 px-4">
+        <div className="min-h-screen bg-[#c2c3c7] flex items-center justify-center py-10 px-4">
             <form 
                 onSubmit={handleSubmit(saveUser)} 
                 className="bg-white shadow-md rounded-lg p-8 max-w-3xl w-full"
             >
-                <h4 className="text-2xl font-semibold text-center text-yellow-700 mb-6">Add Staff Details</h4>
+                <h4 className="text-2xl font-semibold text-center text-[#c59a63] mb-6">Add Staff Details</h4>
 
                 {/* Room Name */}
                 <div className="mb-4">
@@ -56,7 +56,7 @@ const AddStaff = () => {
                         {...register('staffName', { required: true })}
                         placeholder="Staff Name"
                         type="text"
-                        className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-500 focus:outline-none"
+                        className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none"
                     />
                     {errors.staffName && <div className="text-red-500 text-sm mt-1">Please Enter Staff Name!</div>}
                 </div>
@@ -68,7 +68,7 @@ const AddStaff = () => {
                         {...register('staffEmail', { required: true })}
                         placeholder="Staff Email"
                         type="email"
-                        className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-500 focus:outline-none"
+                        className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none"
                     />
                     {errors.staffEmail && <div className="text-red-500 text-sm mt-1">Please Enter Staff Email!</div>}
                 </div>
@@ -80,7 +80,7 @@ const AddStaff = () => {
                         {...register('phoneNo', { required: true })}
                         placeholder="Phone Number"
                         type="number"
-                        className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-500 focus:outline-none"
+                        className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none"
                     />
                     {errors.phoneNo && <div className="text-red-500 text-sm mt-1">Please Enter Phone Number!</div>}
                 </div>
@@ -92,7 +92,7 @@ const AddStaff = () => {
                         {...register('joinDate', { required: true })}
                         placeholder="Joining Date"
                         type='date'
-                        className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-500 focus:outline-none"
+                        className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none"
                     />
                     {errors.joinDate && <div className="text-red-500 text-sm mt-1">Please Enter Joining Date!</div>}
                 </div>
@@ -113,7 +113,7 @@ const AddStaff = () => {
                 <label>On Duty</label>
                     <select
                         {...register('onDuty', { required: true })}
-                        className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-500 focus:outline-none"
+                        className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none"
                     >
                         <option value="">Select</option>
                         <option value="Yes">Yes</option>
@@ -159,7 +159,7 @@ const AddStaff = () => {
                 <label>Role</label>
                     <select
                         {...register('role', { required: true })}
-                        className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-500 focus:outline-none"
+                        className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none"
                     >
                         <option value="">Select</option>
                         <option value="Staff">Staff</option>
@@ -176,14 +176,14 @@ const AddStaff = () => {
                         type="file"
                         multiple
                         {...register('staffImage', { required: true })}
-                        className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-500 focus:outline-none"
+                        className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none"
                     />
                     {errors.staffImage && <div className="text-red-500 text-sm mt-1">Please Select Staff Images!</div>}
                 </div>
 
                 <button
                     type="submit"
-                    className="w-full bg-yellow-600 text-white py-2 px-4 rounded-lg hover:bg-yellow-700 transition-colors"
+                    className="w-full bg-[#c59a63] text-[#293941] py-2 px-4 rounded-lg hover:bg-[#293941] hover:text-[#c59a63] transition-colors"
                 >
                     Add Staff
                 </button>

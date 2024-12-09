@@ -2,9 +2,9 @@ import React, { useState } from 'react';
 import './home.css'
 import { Routes, Route } from 'react-router-dom';
 // import Summary from '../Summary/Summary';
-// import { useDispatch, useSelector } from 'react-redux';
-// import { BsToggleOff, BsToggleOn } from 'react-icons/bs'
-// import { VscAccount } from 'react-icons/vsc'
+import { useDispatch, useSelector } from 'react-redux';
+import { BsToggleOff, BsToggleOn } from 'react-icons/bs'
+import { VscAccount } from 'react-icons/vsc'
 
 import Users from '../Users/Users'
 import ShowRoom from '../RoomsSection/Roomlist'
@@ -37,6 +37,7 @@ import HotelMenu from '../Menu/hotelmenu';
 import AddHotelMenu from '../Menu/addhotelmenu';
 import EventMenu from '../Menu/eventmenu';
 import AddEventMenu from '../Menu/addeventmenu';
+import EventBookingPage from '../EventsBooking/eventbooking';
 
 
 const Home = () => {
@@ -80,7 +81,7 @@ const Home = () => {
               <Route path='/employeetable' element={<EmployeeTable />} />
               <Route path='/all-events' element={<EventList />} />
               <Route path='/add-event' element={<AddEvent />} />
-              <Route path='/event-checkout-detail' element={<EventBookingDetail />} />
+              <Route path='/event-payment-detail' element={<EventBookingDetail />} />
               <Route path='/event-booking-success' element={<EventBookingSuccess />} />
               <Route path='/event-booking-list' element={<EventBookingList />} />
               <Route path='/event-payment-list' element={<EventPaymentList />} />
@@ -94,6 +95,7 @@ const Home = () => {
               <Route path='/add-hotel-menu' element={<AddHotelMenu/>}/>
               <Route path='/event-menu' element={<EventMenu/>}/>
               <Route path='/add-event-menu' element={<AddEventMenu/>}/>
+              <Route path='/event-booking' element={<EventBookingPage/>}/>
               {/* Add other routes as necessary */}
             </Routes>
             <Footer/>

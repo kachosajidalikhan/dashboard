@@ -90,9 +90,9 @@ const userData =''
 
       <div className="container mx-auto py-10">
         <div className="text-center mb-10">
-          <h6 className="text-primary uppercase font-medium mb-2">Room Booking</h6>
+          <h6 className="text-[#293941] uppercase font-medium mb-2">Room Booking</h6>
           <h1 className="text-3xl font-bold">
-            Book A <span className="text-primary uppercase">Luxury Room</span>
+            Book A <span className="text-[#c59a63] uppercase">Luxury Room</span>
           </h1>
         </div>
         <div className="flex flex-wrap">
@@ -224,7 +224,7 @@ const userData =''
                 </div>
                 <button
                   type="submit"
-                  className="bg-primary text-white p-3 rounded hover:bg-blue-700"
+                  className="bg-[#c59a63] text-[#293941] p-3 rounded hover:bg-[#293941] hover:text-[#c59a63]"
                   onClick={()=>{nav("/checkoutbooking")}}
                 >
                   Book Now

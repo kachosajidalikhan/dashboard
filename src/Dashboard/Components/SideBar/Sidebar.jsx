@@ -18,7 +18,7 @@ export default function SideBar({ isOpen, setIsOpen }) {
 
   return (
     <div
-      className={`sidebar text-white ${isOpen ? "w-64" : "w-24 hover:w-64"
+      className={`sidebar text-[#c59a63] ${isOpen ? "w-64" : "w-24 hover:w-64"
         } transition-all duration-300`}
       onMouseOver={() => {
         if (!isOpen) {
@@ -38,8 +38,8 @@ export default function SideBar({ isOpen, setIsOpen }) {
             <NavLink
               to="/"
               className={({ isActive }) =>
-                `flex text-white items-center pt-2 pb-2 pl-3 rounded-lg hover:bg-blue-400 
-              ${isActive ? "bg-blue-400" : ""
+                `flex  items-center pt-2 pb-2 pl-3 rounded-lg hover:bg-[#c59a63] hover:text-[#293941] 
+              ${isActive ? "bg-[#c59a63] text-[#293941]" : "text-[#c59a63]"
                 }`
               }
             >
@@ -137,7 +137,8 @@ export default function SideBar({ isOpen, setIsOpen }) {
             <NavLink
               to="/calendar"
               className={({ isActive }) =>
-                `flex text-white items-center pt-2 pb-2 pl-3 rounded-lg hover:bg-blue-400 ${isActive ? "bg-blue-400" : ""
+                `flex items-center pt-2 pb-2 pl-3 rounded-lg hover:bg-[#c59a63] hover:text-[#293941] 
+              ${isActive ? "bg-[#c59a63] text-[#293941]" : "text-[#c59a63]"
                 }`
               }
             >
@@ -150,7 +151,8 @@ export default function SideBar({ isOpen, setIsOpen }) {
             <NavLink
               to="/income-report"
               className={({ isActive }) =>
-                `flex text-white items-center pt-2 pb-2 pl-3 rounded-lg hover:bg-blue-400 ${isActive ? "bg-blue-400" : ""
+                `flex  items-center pt-2 pb-2 pl-3 rounded-lg hover:bg-[#c59a63] hover:text-[#293941] 
+              ${isActive ? "bg-[#c59a63] text-[#293941]" : "text-[#c59a63]"
                 }`
               }
             >
@@ -192,7 +194,7 @@ function SidebarSubMenu({ isCollapsed, icon, title, links }) {
       <li onMouseLeave={() => setIsSubMenuOpen(false)}>
         <div className="relative">
           {/* Main Menu Item */}
-          <div className="flex pt-2 pb-2 pl-3 pr-3 rounded-lg justify-center items-center hover:bg-blue-400">
+          <div className="flex pt-2 pb-2 pl-3 pr-3 rounded-lg justify-center items-center hover:bg-[#c59a63] hover:text-[#293941]">
             <i className={`${icon} mr-2`} />
             <button
               className="flex focus:outline-none w-full justify-between"
@@ -216,11 +218,11 @@ function SidebarSubMenu({ isCollapsed, icon, title, links }) {
           >
             <ul className="list-disc flex flex-col justify-center text-sm">
               {links.map((link, index) => (
-                <li className="pt-1 pb-1 pl-1 text-xs" key={index}>
+                <li className="pt-1 pb-1 pl-1 " key={index}>
                   <NavLink
                     to={link.href}
                     className={({ isActive }) =>
-                      `hover:text-blue ${isActive ? "text-green-400 font-bold" : ""
+                      ` ${isActive ? "text-[#c59a63] font-semibold" : ""
                       }`
                     }
                   >

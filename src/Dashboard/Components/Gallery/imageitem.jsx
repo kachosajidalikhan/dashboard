@@ -2,7 +2,7 @@ import React from "react";
 
 function ImageItem({ image }) {
   return (
-    <div className="rounded-lg overflow-hidden shadow">
+    <div className="rounded-lg bg-white overflow-hidden shadow">
       <div className="h-40">
         <img
           src={image.src}
@@ -14,13 +14,13 @@ function ImageItem({ image }) {
         {image.tags.map((tag) => (<>
           <span
             key={tag}
-            className="px-2 py-1 bg-gray-200 text-gray-800 text-sm rounded-full"
+            className="px-2 py-1 bg-[#c2c3c7] text-[#293941] text-sm rounded-full"
           >
             {tag}
           </span>
           <div className=" flex gap-1 ">
           <button
-            className="text-xs border rounded shadow-md block focus:outline-none text-left px-2 py-1 hover:bg-gray-100"
+            className="text-xs bg-[#293941] text-[#c59a63] border rounded shadow-md block focus:outline-none text-left px-2 py-1 hover:bg-[#c59a63] hover:text-[#293941]"
             // onClick={handleDelete}
           >
             Delete

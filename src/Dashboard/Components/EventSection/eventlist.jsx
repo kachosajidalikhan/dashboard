@@ -152,12 +152,12 @@ const EventList = () => {
 
 
 
-    <div className="page-wrapper bg-gray-100 min-h-screen">
+    <div className="page-wrapper bg-[#c2c3c7] min-h-screen">
       <div className="content container mx-auto px-4 py-6">
         {/* Page Header */}
         <div className="page-header mb-6">
           <div className="flex justify-between items-center">
-            <h4 className="text-lg font-semibold">Events List</h4>
+            <h4 className="text-lg text-[#293941] font-semibold">Events List</h4>
 
             <div className="nav-item flex align-center">
               <div className=" input-group search-area">
@@ -179,7 +179,7 @@ const EventList = () => {
 
             <a
               onClick={handleEvent}
-              className="btn bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600"
+              className="btn bg-[#293941] text-[#c59a63] py-2 px-4 rounded hover:bg-[#c59a63] hover:text-[#293941]"
             >
               Add Event
             </a>
@@ -191,7 +191,7 @@ const EventList = () => {
           <div className="dataTables_wrapper no-footer">
             <table className="border-collapse table card-table display mb-4 shadow-hover default-table dataTablesCard dataTable no-footer">
               <thead>
-                <tr>
+                <tr className="text-[#293941]">
                   <th className="px-2">Event ID</th>
                   <th className="px-2">Image</th>
                   <th className="px-2">Event Type</th>
@@ -241,9 +241,9 @@ const EventList = () => {
                     <td><span className="text-nowrap">{booking.maxcap}</span></td>
                     <td>
                       <span
-                        className={`px-2 py-1 rounded text-white ${booking.status === "Available"
-                          ? "bg-green-500"
-                          : "bg-gray-500"
+                        className={`px-2 py-1 rounded ${booking.status === "Available"
+                          ? "bg-[#c59a63] text-[#293941]"
+                          : "bg-[#293941] text-[#c59a63]"
                           }`}
                       >
                         {booking.status}
@@ -253,13 +253,13 @@ const EventList = () => {
                       {/* <div className="inline-block relative"> */}
                       <div key={index} className=" flex gap-1 ">
                         <button
-                          className=" border rounded shadow-md block focus:outline-none text-left px-2 py-1 hover:bg-gray-100"
+                          className=" border bg-[#293941] text-[#c59a63] rounded shadow-md block focus:outline-none text-left px-2 py-1 hover:bg-[#c59a63] hover:text-[#293941]"
                           onClick={handleDelete}
                         >
                           Delete
                         </button>
                         <button
-                          className="bg-gray-400 border rounded shadow-md block focus:outline-none text-left px-3 py-1 hover:bg-gray-100"
+                          className="bg-[#c59a63] text-[#293941] border rounded shadow-md block focus:outline-none text-left px-3 py-1 hover:bg-[#293941] hover:text-[#c59a63]"
                           onClick={() => handleEdit()}
                         >
                           Edit
@@ -270,14 +270,14 @@ const EventList = () => {
                     <td><div key={index} className=" flex gap-1 ">
                       {booking.status === "Available" ? (
                         <button
-                          className="border rounded shadow-md block focus:outline-none text-left px-2 py-1 hover:bg-gray-100"
+                          className="border bg-[#c59a63] text-[#293941] rounded shadow-md block focus:outline-none text-left px-2 py-1 hover:bg-[#293941] hover:text-[#c59a63]"
                           onClick={handleBooking}
                         >
                           Book Now
                         </button>
                       ) : (
                         <span
-                          className="border rounded shadow-md block focus:outline-none text-left px-2 py-1 hover:bg-gray-100"
+                          className="border text-[#c59a63] rounded shadow-md block focus:outline-none text-left px-2 py-1 bg-[#293941]"
                         >
                           Booked
                         </span>
