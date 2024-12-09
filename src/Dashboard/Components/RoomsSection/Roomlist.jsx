@@ -190,7 +190,7 @@ const ShowRoom = () => {
         {/* Table */}
         <div className=" card overflow-x-auto">
           <div className="dataTables_wrapper no-footer">
-            <table className="border-collapse table card-table display mb-4 shadow-hover default-table dataTablesCard dataTable no-footer">
+            <table className="border-collapse w-full table card-table display mb-4 shadow-hover default-table dataTablesCard dataTable no-footer">
               <thead>
                 <tr className="text-[#293941]">
                   <th className="px-2">Room ID</th>
